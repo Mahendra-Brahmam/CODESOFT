@@ -1,0 +1,58 @@
+def addition(num1,num2):
+    return num1+num2
+
+def substraction(num1,num2):
+    return num1-num2
+
+def multiplication(num1,num2):
+    return num1*num2
+
+def division(num1,num2):
+    return num1/num2
+
+def power_of_num1(num1):
+    return num1**2
+
+def power_of_num2(num2):
+    return num2**2
+def Square_root_num1(num1):
+    return num1**0.5
+
+def Square_root_num2(num2):
+    return num2**0.5
+
+
+def display():
+    while True:
+        print("Welcome to CodeSoft Calculator")
+        num1=int(input("Enter the value of Number 1:"))
+        num2=int(input("Enter the value of Number 2:"))
+        print("1.To_Add Number1 and Number2")
+        print("2.To_Substract Number1 and Number2")
+        print("3.To_Multiply Number1 and Number2")
+        print("4.To_Divide Number1 and Number2")
+        print("5.To_find the Power of Number1 ")
+        print("6.To_find the power of Number2")
+        print("7.To_find the square root of Number1 ")
+        print("8.To_find square root of  Number2")
+        choice=int(input("Enter your choice :"))
+        if(choice==1):
+            print(addition(num1,num2))
+        elif(choice==2):
+            print(substraction(num1,num2))
+        elif(choice==3):
+            print(multiplication(num1,num2))
+        elif(choice==4):
+            print(division(num1,num2))
+        elif(choice==5):
+            power_of_num1(num1)
+        elif(choice==6):
+            power_of_num1(num2)
+        elif(choice==7):
+            Square_root_num1(num1)
+        elif(choice==8):
+            Square_root_num1(num2)
+        else:
+            print("Sorry,Please enter your choice with in the limits")
+        
+display()
