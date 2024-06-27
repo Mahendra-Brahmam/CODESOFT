@@ -1,0 +1,48 @@
+list=[]
+def add_tasks():
+    task=input("Enter your TASK you want to add:")
+    list.append(task)
+    print(list)
+
+def delete_tasks():
+    if not list:
+        print("Already list is empty it is not possible to delete")
+    else:
+        task=input("Enter your TASK you want to delete:")
+        list.remove(task)
+        print(list)
+    
+
+def track_status():
+    for items in list:
+        status=input(f"Give the status of task {items} whether completed or not: ")
+        if(status=="completed"):
+            print(f"The task {items} is Completed ")
+        else:
+            print(f"The task {items} is NOT Completed ")
+
+
+def display():
+    while True:
+        print("TO--DO--LIST")
+        print("1--To add task")
+        print("2--To delete task")
+        print("3--To track status of the  task")
+        choice=int(input("Enter your choice :"))
+        if(choice==1):
+            add_tasks()
+        elif(choice==2):
+            delete_tasks()
+        elif(choice==3):
+            track_status()
+        
+        print("If you want continue then type yes ,If not no")
+        continue_or_not=input("continue_or_not== ")
+        if(continue_or_not=="yes"):
+                pass
+        else:
+            print(list)
+            break
+        
+
+display()
